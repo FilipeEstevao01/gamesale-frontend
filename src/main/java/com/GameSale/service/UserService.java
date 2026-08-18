@@ -18,7 +18,7 @@ public class UserService {
 
 
     public Usuario getusuarioBySenha(String senha) {
-        return usuarioRepository.findBySenha(senha)
+        return (Usuario) usuarioRepository.findByEmail(senha)
                 .orElseThrow(() -> new RuntimeException("User not found"));
     }
 }
