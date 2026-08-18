@@ -9,8 +9,10 @@ import java.util.List;
 @Service
 public class UserService {
 
-
+    // Aqui criando uma variavel.
+    // O usuario e que converça com o banco.
     private UsuarioRepository usuarioRepository;
+
 
     public UserService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
@@ -21,4 +23,6 @@ public class UserService {
         return (Usuario) usuarioRepository.findByEmail(senha)
                 .orElseThrow(() -> new RuntimeException("User not found"));
     }
+
+
 }
