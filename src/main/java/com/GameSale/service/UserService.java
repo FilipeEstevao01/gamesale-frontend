@@ -27,6 +27,12 @@ public class UserService {
         return (Usuario) usuarioRepository.findByEmail(senha)
                 .orElseThrow(() -> new RuntimeException("User not found"));
     }
+    //Foi criado uma regra de negocio para limitar a quantidade de caraquiter na senha uma boa regra de negocio
+    public Usuario cadastrarUsuario(Usuario usuario) {
 
-
+        if(usuario.getSenha().length() < 8) {
+            throw new RuntimeException("Senha deve ter no minimo 8 caracteres");
+        }
+        return usuarioRepository.save(usuario);
+     }
 }
