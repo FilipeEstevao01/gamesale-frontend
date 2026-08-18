@@ -10,11 +10,9 @@ import lombok.Setter;
 @Table(name = "usuarios")
 public class Usuario {
 
-
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "serial")
     private Integer id;
     private String senha;
 
