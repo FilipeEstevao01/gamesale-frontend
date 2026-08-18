@@ -13,7 +13,7 @@ public class UserService {
     // O usuario e que converça com o banco.
     private UsuarioRepository usuarioRepository;
 
-
+    //Isso e a injeção de dependecias por construtor
     public UserService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
