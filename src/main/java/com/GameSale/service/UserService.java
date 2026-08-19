@@ -6,6 +6,8 @@ import com.GameSale.Application.repository.UsuarioRepository;
 import com.GameSale.entity.Usuario;
 import org.springframework.stereotype.Service;
 
+
+// aqui com esta anotachion informo que essa class faz parde da camada de servicee quero que o spring gerencie ela.
 @Service
 public class UserService {
 
