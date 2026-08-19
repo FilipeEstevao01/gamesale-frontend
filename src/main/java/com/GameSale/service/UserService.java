@@ -9,8 +9,11 @@ import org.springframework.stereotype.Service;
 
 // aqui com esta anotachion informo que essa class faz parde da camada de servicee quero que o spring gerencie ela.
 @Service
+
+// Aqui está declarando a class
 public class UserService {
 
+    //Meu UserService possui um UsuarioRepository para acessar os dados dos usuários.
     private final UsuarioRepository usuarioRepository;
 
     public UserService(UsuarioRepository usuarioRepository) {
