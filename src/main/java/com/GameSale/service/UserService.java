@@ -1,38 +1,45 @@
+
+//Isso informa o pacote em que sua class esta localizada
 package com.GameSale.service;
 
 import com.GameSale.Application.repository.UsuarioRepository;
 import com.GameSale.entity.Usuario;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class UserService {
 
-    // Aqui criando uma variavel.
-    // O usuario e que converça com o banco.
-
-    private UsuarioRepository usuarioRepository;
-
-    //Isso e a injeção de dependecias por construtor
+    private final UsuarioRepository usuarioRepository;
 
     public UserService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
 
-    //O public esta falando basicamente que esta class pode ser usada em outras class
-    public Usuario getusuarioBySenha(String senha) {
+    public boolean buscarPorEmail(String email) {
 
-
-        return (Usuario) usuarioRepository.findByEmail(senha)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+        return usuarioRepository.findByEmail(email);
     }
-    //Foi criado uma regra de negocio para limitar a quantidade de caraquiter na senha uma boa regra de negocio
+
     public Usuario cadastrarUsuario(Usuario usuario) {
 
-        if(usuario.getSenha().length() < 8) {
-            throw new RuntimeException("Senha deve ter no minimo 8 caracteres");
+        if (usuarioRepository.findByEmail(usuario.getEmail())) {
+            throw new RuntimeException("Email já cadastrado");
         }
+
         return usuarioRepository.save(usuario);
-     }
+    }
+
+    public Usuario buscarPorId(Integer id) {
+
+        return usuarioRepository.findById(id)
+                .orElseThrow(() ->
+                        new RuntimeException("Usuario não encontrado")
+                        );
+    }
+
+    public  void excluir(Integer id) {
+
+        Usuario usuario = buscarPorId(id);
+        usuarioRepository.delete(usuario);
+    }
 }
