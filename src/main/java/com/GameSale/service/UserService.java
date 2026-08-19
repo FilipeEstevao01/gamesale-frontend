@@ -4,6 +4,7 @@
 //Isso informa o pacote em que sua class esta localizada
 package com.GameSale.service;
 
+
 import com.GameSale.Application.repository.UsuarioRepository;
 import com.GameSale.entity.Usuario;
 import org.springframework.stereotype.Service;
