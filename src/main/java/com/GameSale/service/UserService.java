@@ -54,5 +54,20 @@ public class UserService {
         usuarioRepository.findAllByNome(nome);
     }
 
+    //EMAIL
 
+    //Aqui e a requisição para buscar todos
+    public String findAllByEmail(String email) {
+        return usuarioRepository.findAllByEmail(email);
+    }
+
+    //Aqui e a requisição para verificar a existencias de mais de um email
+    public String existsByEmail(String email) {
+        return usuarioRepository.existsByEmail(email);
+    }
+
+    //Aqui a requisição para deletar por email
+    public void deleteByEmail(String email) {
+        usuarioRepository.deleteByEmail(email);
+    }
 }

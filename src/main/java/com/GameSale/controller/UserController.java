@@ -59,4 +59,24 @@ public class UserController {
     public void deleByNome(String nome) {
         userService.deleteByNome(nome);
     }
+
+    //EMAIL
+
+    //Aqui e a ação determinada de verificar os email Service
+    @GetMapping
+    public String findAllByNome(String email) {
+        return userService.findAllByEmail(email);
+    }
+
+    //Aqui e a ação determinada de verificar os email Service
+    @GetMapping
+    public String existsByEmail(String email) {
+        return userService.existsByEmail(email);
+    }
+
+    //Aqui e a ação de deletar email da service
+    @DeleteMapping
+    public  void deleteByEmail(String email) {
+        userService.deleteByEmail(email);
+    }
 }

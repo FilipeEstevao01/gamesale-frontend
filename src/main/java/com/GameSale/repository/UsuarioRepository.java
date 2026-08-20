@@ -31,4 +31,15 @@ public interface  UsuarioRepository  extends JpaRepository<Usuario, Integer> {
 
     // Aqui e o deletar por nome
     void deleteByNome(String nome);
+
+    //EMAIL
+
+    // Aqui busca todos pelo email
+    String findAllByEmail(String email);
+
+    // Aqui verifica se existe um usuario com mesmo email
+    String existsByEmail(String email);
+
+    // Aqui e o deletar por email
+    void deleteByEmail(String nome);
 }
