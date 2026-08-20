@@ -21,5 +21,14 @@ public interface  UsuarioRepository  extends JpaRepository<Usuario, Integer> {
     // Aqui e o deletar por ID
     void deleteById(@NonNull Integer id);
 
+    //NOME
 
+    // Aqui busca todos pelo nome
+    String findAllByNome(String Nome);
+
+    // Aqui verifica se existe um usuario com mesmo nome
+    String existsByNome(String nome);
+
+    // Aqui e o deletar por nome
+    void deleteByNome(String nome);
 }

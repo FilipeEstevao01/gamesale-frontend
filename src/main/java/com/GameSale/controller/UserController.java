@@ -35,8 +35,28 @@ public class UserController {
     }
 
     //Aqui e a ação de deletar ID da service
-    @GetMapping("/{id}delete")
+    @DeleteMapping("/{id}delete")
     public void deleteById(Integer id) {
         userService.deleteById(id);
+    }
+
+    //NOME
+
+    //Aqui e a ação determinada da Service para buscar por nome
+    @GetMapping
+    public String findAllNome(String nome) {
+        return userService.findAllByNome(nome);
+    }
+
+    //Aqui e a ação determinada de verificar os nome Service
+    @GetMapping
+    public String existsByNome(String nome) {
+        return userService.findAllByNome(nome);
+    }
+
+    //Aqui e a ação de deletar nome da service
+    @DeleteMapping
+    public void deleByNome(String nome) {
+        userService.deleteByNome(nome);
     }
 }
