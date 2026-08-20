@@ -22,9 +22,21 @@ public class UserController {
 
     //ID
 
+    //Aqui e a ação determinada da Service para buscar por ID
     @GetMapping
-    public List<Usuario> finById(Integer id) {
-        return userService.findById(id);
+    public Boolean findAllById(Integer id) {
+        return userService.findAllById(id);
     }
 
+    //Aqui e a ação determinada de verificar os ID Service
+    @GetMapping("/{id}/exists")
+    public boolean existsById(@PathVariable Integer id) {
+        return userService.existsById(id);
+    }
+
+    //Aqui e a ação de deletar ID da service
+    @GetMapping("/{id}delete")
+    public void deleteById(Integer id) {
+        userService.deleteById(id);
+    }
 }
