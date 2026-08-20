@@ -1,58 +1,54 @@
-
-//Na Service é onde normalmente colocamos as regras de negócio.
-
-//Isso informa o pacote em que sua class esta localizada
 package com.GameSale.service;
 
-
-import com.GameSale.Application.repository.UsuarioRepository;
+import com.GameSale.repository.UsuarioRepository;
 import com.GameSale.entity.Usuario;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 
-// aqui com esta anotachion informo que essa class faz parde da camada de servicee quero que o spring gerencie ela.
 @Service
-
-// Aqui está declarando a class
 public class UserService {
 
-    //Meu UserService possui um UsuarioRepository para acessar os dados dos usuários.
     private final UsuarioRepository usuarioRepository;
 
-    //Aqui esta o contrutor
     public UserService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
 
-    //Aqui foi criado o metodo buscar por e-mail
-    public boolean buscarPorEmail(String email) {
-
+    // Buscar usuário pelo email
+    public String findByEmail(String email) {
         return usuarioRepository.findByEmail(email);
     }
 
-    //Aqui e feito o cadastro de usuario
-    public Usuario cadastrarUsuario(Usuario usuario) {
-
-        //Agora vem a regra de de negocio
-        if (usuarioRepository.findByEmail(usuario.getEmail())) {
-            throw new RuntimeException("Email já cadastrado");
-        }
-
-        return usuarioRepository.save(usuario);
+    // Verificar se email já existe
+    public String emailExist(String email) {
+        return usuarioRepository.existsByEmail(email);
     }
 
-    public Usuario buscarPorId(Integer id) {
-
-        return usuarioRepository.findById(id)
-                .orElseThrow(() ->
-                        new RuntimeException("Usuario não encontrado")
-                        );
+    // Buscar usuários que contenham determinado nome
+    public List<Usuario> findByName(String name) {
+        return usuarioRepository.findByNomeContaining(name);
     }
 
-    //metodo para excluir usuario
-    public  void excluir(Integer id) {
-
-        Usuario usuario = buscarPorId(id);
-        usuarioRepository.delete(usuario);
+    // Buscar usuários cujo nome começa com determinado texto
+    public List<Usuario> findByNameStartingWith(String name) {
+        return usuarioRepository.findByNomeStartingWith(name);
     }
+
+    // Buscar por nome e ordenar alfabeticamente
+    public List<Usuario> findByNameOrdered(String name) {
+        return usuarioRepository.findByNomeContainingOrderByNomeAsc(name);
+    }
+
+    // Deletar Email
+    public void deleteByEmail(String email) {
+        usuarioRepository.deleteByEmail(email);
+    }
+
+    // Buscar todos
+    public List<Usuario> findAll() {
+        return usuarioRepository.findAll();
+    }
+
+
 }
