@@ -1,15 +1,7 @@
 package com.GameSale.service;
 
 import com.GameSale.repository.UsuarioRepository;
-import com.GameSale.entity.Usuario;
-import jakarta.persistence.Id;
-import org.hibernate.Internal;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.Optional;
-
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Service
 public class UserService {
@@ -19,7 +11,6 @@ public class UserService {
     public UserService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
-
     //ID
 
     //Aqui e a requisição para buscar todos
@@ -35,5 +26,20 @@ public class UserService {
     //Aqui a requisição para deletar por ID
     public void deleteById(Integer id) {
         usuarioRepository.deleteById(id);
+    }
+    //nome
+
+    //Aqui e a requisição para buscar todos
+    public void findAllNome(String nome) {
+        usuarioRepository.finAllByNome(nome);
+    }
+    //Aqui e a requisição para verificar a existencias de mais de um nome
+    public String existsByNome(String nome) {
+        return usuarioRepository.existsByNome(nome);
+    }
+
+    //Aqui a requisição para deletar por nome
+    public void deleteByNome(String nome) {
+        usuarioRepository.deleteByNome(nome);
     }
 }

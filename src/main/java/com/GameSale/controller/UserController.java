@@ -19,11 +19,10 @@ public class UserController {
     public UserController(UserService userService) {
         this.userService = userService;
     }
-
     //ID
 
     //Aqui e a ação determinada da Service para buscar por ID
-    @GetMapping
+    @GetMapping("/{id}/find")
     public Boolean findAllById(Integer id) {
         return userService.findAllById(id);
     }
@@ -35,8 +34,27 @@ public class UserController {
     }
 
     //Aqui e a ação de deletar ID da service
-    @GetMapping("/{id}delete")
+    @DeleteMapping("/{id}/delete")
     public void deleteById(Integer id) {
         userService.deleteById(id);
+    }
+    //Nome
+
+    //Aqui e a ação determinada da Service para buscar por nome
+    @GetMapping
+    public void findAllNome(String nome) {
+        userService.findAllNome(nome);
+    }
+
+    //Aqui e a ação determinada de verificar os nome Service
+    @GetMapping
+    public String existsByNome(String nome) {
+        return userService.existsByNome(nome);
+    }
+
+    //Aqui e a ação de deletar nome da service
+    @DeleteMapping
+    public void deleteByNome(String nome) {
+        userService.deleteByNome(nome);
     }
 }
