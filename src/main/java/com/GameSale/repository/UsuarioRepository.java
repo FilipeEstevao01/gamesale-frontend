@@ -2,7 +2,9 @@ package com.GameSale.repository;
 
 import com.GameSale.entity.Usuario;
 import java.util.List;
+import java.util.Optional;
 
+import org.jspecify.annotations.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,18 +14,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface  UsuarioRepository  extends JpaRepository<Usuario, Integer> {
 
+    //ID
 
-    void findNameByName(String name);
-
-    String existsByEmail(String email);
-
-    String findByEmail(String email);
-
-    List<Usuario> findByNomeContainingOrderByNomeAsc(String nome);
-
-    List<Usuario> findByNomeContaining(String nome);
-
-    List<Usuario> findByNomeStartingWith(String name);
-
-    void deleteByEmail(String email);
+    List<Usuario> finById(Integer id);
 }

@@ -14,6 +14,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(columnDefinition = "serial")
     private Integer id;
+    private String nome;
     private String email;
     private String senha;
 

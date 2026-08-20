@@ -2,10 +2,13 @@ package com.GameSale.controller;
 
 
 import com.GameSale.entity.Usuario;
+import com.GameSale.repository.UsuarioRepository;
 import com.GameSale.service.UserService;
+import jakarta.persistence.Id;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping()
@@ -17,24 +20,11 @@ public class UserController {
         this.userService = userService;
     }
 
+    //ID
+
     @GetMapping
-    public List<Usuario> findAll() {
-        return userService.findAll();
-    }
-
-    @GetMapping("/email/{email}")
-    public String findByEmail(@PathVariable String email) {
-        return userService.findByEmail(email);
-    }
-
-    @GetMapping("/name/{name}")
-    public String findByname(@PathVariable String name) {
-        return userService.findByEmail(name);
-    }
-
-    @DeleteMapping("/email/{email}")
-        public void deleteByEmail (@PathVariable String email) {
-        userService.deleteByEmail(email);
+    public List<Usuario> finById(Integer id) {
+        return userService.findById(id);
     }
 
 }
