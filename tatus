@@ -1,0 +1,112 @@
+[33mcommit ef1757b2afd26bcb189a8adecb9a6240d45d4e20[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Thu Aug 20 17:55:10 2026 -0300
+
+    Foi criado os mesmo metodos criados para i ID para o nome. Agira fazer com email.
+
+[33mcommit f2e7a070ffc8ebbaacc21a3ea3a10af22446d7a6[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Thu Aug 20 17:08:30 2026 -0300
+
+    Foi criado os metodos buscar verificar se ja existe e deletar do ID. Tarefa fazer com nome
+
+[33mcommit a391e247dfed58e464dd20f786bca1886c0f4666[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Thu Aug 20 16:10:28 2026 -0300
+
+    Foi implementado na UserRepository - UserService - UserController o metodo findById
+
+[33mcommit 80b8dee9c4deefafa2966969d04fc77a12d2dea9[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Thu Aug 20 07:54:20 2026 -0300
+
+    Agora vou tentar fazer para outras tabelas
+
+[33mcommit bf45eda6407661dac76cb69d511db38cc7430a83[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Thu Aug 20 07:18:20 2026 -0300
+
+    Tive que alterar o POM para aceitar o import das anotation vou começar a UserControler
+
+[33mcommit b077574ab3ab80da0c25393c5c44fbc2f9ef8599[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Wed Aug 19 17:25:00 2026 -0300
+
+    Intendi que tenho que passar informações na repositori que e tipo a tradução da service para o banco
+
+[33mcommit 3fbfb20b25d4dc7e492097d9ac7604da3672d84c[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Wed Aug 19 11:12:23 2026 -0300
+
+    Foi criado na Service algumas regas de negocio para o GameSale e comentado o codigo para fins de estudo. Revisar depois.
+
+[33mcommit b276d90617a6fe3b4873377519346db3ce993d2d[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 23:27:54 2026 -0300
+
+    Meu UserService possui um UsuarioRepository para acessar os dados dos usuários.
+
+[33mcommit 023ebbe2699c59ef4e894c7fefab3c53721225c4[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 23:23:46 2026 -0300
+
+    aqui com esta anotachion informo que essa class faz parde da camada de servicee quero que o spring gerencie ela.
+
+[33mcommit 9768ada250f03c60a0b00b6d6d9e753f480c1731[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 23:20:44 2026 -0300
+
+    Isso informa o pacote em que sua class esta localizada
+
+[33mcommit cea37c304ce3966815785765ff0692f6759aa82b[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 20:03:15 2026 -0300
+
+    Foi criado uma regra de negocio que limita os caraquiters da senha e tambem adicionado no banco a coluna de senhas
+
+[33mcommit 448d8fb336dacc9570fb1941e2d05d9e03f011f6[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 19:37:34 2026 -0300
+
+    Foi feito o comentario do public que permite outas classes usarem esta class
+
+[33mcommit 2cea5bfe0484d7677bfc74552e2341ab945c5fc9[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 19:32:57 2026 -0300
+
+    Foi comentado a injeção de dependencias
+
+[33mcommit 465981e33bc381170f45c04dff760b6adabda596[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 19:31:04 2026 -0300
+
+    Foi comentado a criação da variavel
+
+[33mcommit 54c1d4a8aa684e5824e398fc68a6fa88374d4b29[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 19:10:31 2026 -0300
+
+    Consegui achar o erro o nome do metodo e findByEmail por isso estava errado o nome do metodo e este
+
+[33mcommit 59c2b0d8fcf0d63741259a6c8b97e9b05dd8151f[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 18:02:19 2026 -0300
+
+    Foi feito a service
+
+[33mcommit 1084ba185238d19533150f167681b9f229a1c775[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 16:50:55 2026 -0300
+
+    foi criado a entity e acresentado o @GeneretedValue e o @Colunm na tabela
+
+[33mcommit 3760450eba1c8568756a0ed6ef361b6676bd7205[m
+Author: Filipe <filipedev0@gmail.com>
+Date:   Tue Aug 18 09:53:26 2026 -0300
+
+    estrutura inicial do backend e entidade usuario
+[33mef1757b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Foi criado os mesmo metodos criados para i ID para o nome. Agira fazer com email.
+[33mf2e7a07[m Foi criado os metodos buscar verificar se ja existe e deletar do ID. Tarefa fazer com nome
+[33ma391e24[m Foi implementado na UserRepository - UserService - UserController o metodo findById
+[33m80b8dee[m Agora vou tentar fazer para outras tabelas
+[33mbf45eda[m Tive que alterar o POM para aceitar o import das anotation vou começar a UserControler

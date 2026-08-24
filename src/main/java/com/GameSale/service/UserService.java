@@ -27,19 +27,30 @@ public class UserService {
     public void deleteById(Integer id) {
         usuarioRepository.deleteById(id);
     }
+
     //nome
 
     //Aqui e a requisição para buscar todos
     public void findAllNome(String nome) {
-        usuarioRepository.finAllByNome(nome);
-    }
-    //Aqui e a requisição para verificar a existencias de mais de um nome
-    public String existsByNome(String nome) {
-        return usuarioRepository.existsByNome(nome);
+        usuarioRepository.findAllByNome(nome);
     }
 
-    //Aqui a requisição para deletar por nome
+    public void existsByNome(String nome) {
+        usuarioRepository.existsByNome(nome);
+    }
+
     public void deleteByNome(String nome) {
         usuarioRepository.deleteByNome(nome);
     }
+
+    //E-mail
+
+    public void findAllByEmail(String email) {
+        usuarioRepository.findAllByNome(email);
+    }
+
+    public void existsByAllEmail(String email) {
+        usuarioRepository.existsByEmail(email);
+    }
 }
+
