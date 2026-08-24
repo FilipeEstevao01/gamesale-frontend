@@ -39,4 +39,38 @@ public class UserController {
     public void deleteById(Integer id) {
         userService.deleteById(id);
     }
+
+    //Nome
+
+    @GetMapping
+    public void findAllNome(String nome) {
+        userService.findAllByNome(nome);
+    }
+
+    @GetMapping
+    public void existsNome(String nome) {
+        userService.existsByNome(nome);
+    }
+
+    @DeleteMapping
+    public void deleteByNome(String nome) {
+        userService.deleteByNome(nome);
+    }
+
+    //E-mail
+
+    @GetMapping
+    public void findAllEmail(String email) {
+        userService.findAllByEmail(email);
+    }
+
+    @GetMapping
+    public void existsEmail(String email) {
+        userService.existsByAllEmail(email);
+    }
+
+    @DeleteMapping
+    public void deleteByEmail (String email) {
+        userService.deleteByEmail(email);
+    }
 }

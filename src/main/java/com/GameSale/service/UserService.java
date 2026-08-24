@@ -1,7 +1,10 @@
 package com.GameSale.service;
 
+import com.GameSale.entity.Usuario;
 import com.GameSale.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserService {
@@ -31,7 +34,7 @@ public class UserService {
     //nome
 
     //Aqui e a requisição para buscar todos
-    public void findAllNome(String nome) {
+    public void findAllByNome(String nome) {
         usuarioRepository.findAllByNome(nome);
     }
 
@@ -51,6 +54,10 @@ public class UserService {
 
     public void existsByAllEmail(String email) {
         usuarioRepository.existsByEmail(email);
+    }
+
+    public void deleteByEmail(String email) {
+        usuarioRepository.deleteByEmail(email);
     }
 }
 

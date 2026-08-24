@@ -6,6 +6,8 @@ import org.jspecify.annotations.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 
 @Repository
 public interface  UsuarioRepository  extends JpaRepository<Usuario, Integer> {
@@ -32,9 +34,9 @@ public interface  UsuarioRepository  extends JpaRepository<Usuario, Integer> {
 
     //E-mail
 
-    void findAllByEmail(String email);
+    void findAllEmail(String email);
 
     void existsByEmail(String email);
 
-
+    void deleteByEmail(String email);
 }
