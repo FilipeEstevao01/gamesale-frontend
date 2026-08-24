@@ -23,7 +23,7 @@ public class UserController {
     //ID
 
     //Aqui e a ação determinada da Service para buscar por ID
-    @GetMapping
+    @GetMapping("/{id}/find")
     public Boolean findAllById(Integer id) {
         return userService.findAllById(id);
     }
@@ -42,34 +42,34 @@ public class UserController {
 
     //Nome
 
-    @GetMapping
+    @GetMapping("/{name}find")
     public void findAllNome(String nome) {
         userService.findAllByNome(nome);
     }
 
-    @GetMapping
+    @GetMapping("/{name}exists")
     public void existsNome(String nome) {
         userService.existsByNome(nome);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{name}delete")
     public void deleteByNome(String nome) {
         userService.deleteByNome(nome);
     }
 
     //E-mail
 
-    @GetMapping
+    @GetMapping("/{email}find")
     public void findAllEmail(String email) {
         userService.findAllByEmail(email);
     }
 
-    @GetMapping
+    @GetMapping("/{email}exists")
     public void existsEmail(String email) {
         userService.existsByAllEmail(email);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{email}delete")
     public void deleteByEmail (String email) {
         userService.deleteByEmail(email);
     }
