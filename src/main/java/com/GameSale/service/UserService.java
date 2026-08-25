@@ -14,6 +14,17 @@ public class UserService {
 
     private final UsuarioRepository usuarioRepository;
 
+
+    public void create(UsuarioRequestDTO dto) {
+        Usuario usuario = new Usuario();
+
+        usuario.setNome(dto.getNome());
+        usuario.setEmail(dto.getEmail());
+        usuario.setSenha(dto.getSenha());
+
+        usuario.save(usuario);
+    }
+
     public UserService(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }

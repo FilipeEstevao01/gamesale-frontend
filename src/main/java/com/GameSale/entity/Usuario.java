@@ -18,6 +18,10 @@ public class Usuario {
     private String email;
     private String senha;
 
+   public void save(Usuario usuario){
+       this.setId(usuario.getId());
+       this.setNome(usuario.getNome());
+   }
 }
 
 

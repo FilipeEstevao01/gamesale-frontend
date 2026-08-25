@@ -1,6 +1,7 @@
 package com.GameSale.repository;
 import com.GameSale.DTO.UsuarioRequestDTO;
 import com.GameSale.entity.Usuario;
+import jakarta.persistence.GenerationType;
 import org.jspecify.annotations.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -8,10 +9,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface  UsuarioRepository  extends JpaRepository<Usuario, Integer> {
-
-
-
-
 
     //ID
 

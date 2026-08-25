@@ -12,7 +12,6 @@ import lombok.*;
 public class UsuarioRequestDTO {
 
 
-
     private String nome;
 
     private String email;
