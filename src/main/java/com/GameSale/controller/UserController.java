@@ -1,6 +1,7 @@
 package com.GameSale.controller;
 import java.util.List;
 
+import com.GameSale.DTO.UsuarioRequestDTO;
 import com.GameSale.entity.Usuario;
 
 import com.GameSale.service.UserService;

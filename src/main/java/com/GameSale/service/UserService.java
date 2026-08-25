@@ -1,12 +1,16 @@
 package com.GameSale.service;
 
+import com.GameSale.DTO.UsuarioRequestDTO;
 import com.GameSale.entity.Usuario;
 import com.GameSale.repository.UsuarioRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class UserService {
+
+
 
     private final UsuarioRepository usuarioRepository;
 
