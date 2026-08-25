@@ -2,9 +2,8 @@ package com.GameSale.service;
 
 import com.GameSale.entity.Usuario;
 import com.GameSale.repository.UsuarioRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
@@ -17,8 +16,8 @@ public class UserService {
     //ID
 
     //Aqui e a requisição para buscar todos
-    public Boolean findAllById(Integer id) {
-        return usuarioRepository.findAllById(id);
+    public void findAllById(Integer id) {
+        usuarioRepository.findAllById(id);
     }
 
     //Aqui e a requisição para verificar a existencias de mais de um ID

@@ -1,14 +1,11 @@
 package com.GameSale.controller;
-
+import java.util.List;
 
 import com.GameSale.entity.Usuario;
-import com.GameSale.repository.UsuarioRepository;
+
 import com.GameSale.service.UserService;
-import jakarta.persistence.Id;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping()
@@ -24,8 +21,8 @@ public class UserController {
 
     //Aqui e a ação determinada da Service para buscar por ID
     @GetMapping("/{id}/find")
-    public Boolean findAllById(Integer id) {
-        return userService.findAllById(id);
+    public void findAllById(Integer id) {
+        userService.findAllById(id);
     }
 
     //Aqui e a ação determinada de verificar os ID Service
@@ -43,7 +40,7 @@ public class UserController {
     //Nome
 
     @GetMapping("/{name}find")
-    public void findAllNome(String nome) {
+    public void findAllByNome(String nome) {
         userService.findAllByNome(nome);
     }
 

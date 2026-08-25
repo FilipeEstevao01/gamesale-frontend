@@ -1,12 +1,8 @@
 package com.GameSale.repository;
-
 import com.GameSale.entity.Usuario;
-
 import org.jspecify.annotations.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 
 @Repository
@@ -15,7 +11,7 @@ public interface  UsuarioRepository  extends JpaRepository<Usuario, Integer> {
     //ID
 
     // Aqui busca todos pelo ID
-    Boolean findAllById(Integer id);
+    void findAllById(Integer id);
 
     // Aqui verifica se existe um usuario com mesmo ID
     boolean existsById(@NonNull Integer id);
