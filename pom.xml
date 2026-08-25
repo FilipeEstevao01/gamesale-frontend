@@ -49,6 +49,13 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- Dependencia de criptografia de senha -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
