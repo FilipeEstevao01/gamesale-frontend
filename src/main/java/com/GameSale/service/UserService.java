@@ -4,35 +4,39 @@ import com.GameSale.DTO.UsuarioRequestDTO;
 import com.GameSale.entity.Usuario;
 import com.GameSale.repository.UsuarioRepository;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class UserService {
 
-
-
     private final UsuarioRepository usuarioRepository;
 
 
-    public void create(UsuarioRequestDTO dto) {
+    public UserService(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }
+
+    //CREAT
+
+    public Usuario create(UsuarioRequestDTO dto) {
+
         Usuario usuario = new Usuario();
 
         usuario.setNome(dto.getNome());
         usuario.setEmail(dto.getEmail());
         usuario.setSenha(dto.getSenha());
 
-        usuario.save(usuario);
+        return usuarioRepository.save(usuario);
     }
 
-    public UserService(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
-    }
     //ID
 
     //Aqui e a requisição para buscar todos
-    public void findAllById(Integer id) {
-        usuarioRepository.findAllById(id);
+    public Optional<Usuario> findById(Integer id) {
+        return usuarioRepository.findById(id);
     }
 
     //Aqui e a requisição para verificar a existencias de mais de um ID
@@ -48,12 +52,12 @@ public class UserService {
     //nome
 
     //Aqui e a requisição para buscar todos
-    public void findAllByNome(String nome) {
-        usuarioRepository.findAllByNome(nome);
+    public List<Usuario> findAllByNome(String nome) {
+        return usuarioRepository.findAllByNome(nome);
     }
 
-    public void existsByNome(String nome) {
-        usuarioRepository.existsByNome(nome);
+    public Boolean existsByNome(String nome) {
+        return usuarioRepository.existsByNome(nome);
     }
 
     public void deleteByNome(String nome) {
@@ -62,12 +66,12 @@ public class UserService {
 
     //E-mail
 
-    public void findAllByEmail(String email) {
-        usuarioRepository.findAllByNome(email);
+    public Optional<Usuario> findAllByEmail(String email) {
+        return usuarioRepository.findByEmail(email);
     }
 
-    public void existsByAllEmail(String email) {
-        usuarioRepository.existsByEmail(email);
+    public Boolean existsByEmail(String email) {
+        return usuarioRepository.existsByEmail(email);
     }
 
     public void deleteByEmail(String email) {
