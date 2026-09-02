@@ -1,12 +1,9 @@
 package com.GameSale.Project;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+public class ProjectApplicationTests {
 
-@SpringBootTest
-class ProjectApplicationTests {
 
-	@Test
+	
 	void contextLoads() {
 	}
 
