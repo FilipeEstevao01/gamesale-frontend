@@ -27,11 +27,9 @@
 
     border-radius: 40px;
 
-    background: linear-gradient(
-        145deg,
-        rgba(120, 35, 95, 0.65),
-        rgba(115, 160, 255, 0.65)
-    );
+    background: linear-gradient(145deg,
+            rgba(120, 35, 95, 0.65),
+            rgba(115, 160, 255, 0.65));
 
     backdrop-filter: blur(15px);
 
@@ -60,7 +58,11 @@
     height: 430px;
 }
 
-  .botao {
+.labeltelefone {
+    font-size: 14px;
+}
+
+.bottonSalvar {
     width: 40%;
     height: 35px;
 
@@ -68,9 +70,14 @@
     border-radius: 5px;
 
     cursor: pointer;
-
- 
-
-  
 }
 
+.BottonDeletar {
+    width: 40%;
+    height: 35px;
+
+    border: 2px solid #7860d8;
+    border-radius: 5px;
+
+    cursor: pointer;
+}

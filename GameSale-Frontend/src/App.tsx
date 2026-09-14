@@ -1,5 +1,8 @@
 import './App.css';
 import Cabesalho from './components/Cabesalho';
+import BottonSalvar from './components/BottonSalvar';
+import BottonDeletar from './components/BottonDeletar';
+
 
 
 function App() {
@@ -70,31 +73,9 @@ function App() {
                 </div>
 
 
-               
-                
-                <div>
-                    <a href="https://seusite.com.br" className="botao-enviar"></a>
-                    <button className="botao">
-                        Enviar
-                    </button>
-                </div>
-
-
-                <div>
-                    <a href="https://seusite.com.br" className="botao-cancelar"></a>
-                    <button className="botao">
-                        Cancelar
-                    </button>
-                </div>
-
-                
-             
-
-
+                <BottonSalvar />
+                <BottonDeletar /> <br />
             </div>
-
-
-
         </>
     )
 }
