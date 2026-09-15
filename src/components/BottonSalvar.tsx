@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function BottonSalvar() {
 
-    const [nome, setNome] = useState("");
+    const [nome] = useState("");
 
     const salvar = async () => {
 
@@ -42,21 +42,12 @@ function BottonSalvar() {
 
     return (
         <div>
-          
-          <input type="text" 
-          placeholder="Digite seu nome..."
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-          />
-           
             <button
                 className="bottonSalvar"
                 onClick={salvar}
             >
                 Salvar
             </button>
-
-
         </div>
     );
 }
