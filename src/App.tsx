@@ -14,17 +14,9 @@ function App() {
             <Cabesalho />
 
             <div className='Card'>
-
-
-
-
                 <div className='BottonSalvarApp'>
                     <BottonSalvar />
                 </div>
-
-
-
-
                 <BottonDeletar />
             </div>
 

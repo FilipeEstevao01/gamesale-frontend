@@ -1,8 +1,35 @@
-.H1Title {
-    text-align: center;
-    color: #070707;
-    font-size: 16px;
+.Topo {
+    background-color: #d7d6d6;
+    padding: 10px;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(145deg, rgba(120, 35, 95, 0.65), rgba(115, 160, 255, 0.65));
+    background-clip: padding-box;
+    box-shadow: inset 0 0 0 2px #d7d6d6;
 }
+
+
+
+
+
+
+.H1Title {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    font-size: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .container-centralizado {
     display: flex;
@@ -15,6 +42,11 @@
 }
 
 .Card {
+
+    position: relative;
+    left: 840px;
+    top: 50px;
+
     justify-content: center;
     width: 320px;
     height: 430px;
@@ -79,6 +111,10 @@
 }
 
 .bottonDeletar {
+    position: relative;
+    left: 180px;
+    top: 183px;
+
     width: 40%;
     height: 35px;
 
