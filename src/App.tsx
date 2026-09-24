@@ -13,12 +13,34 @@ function App() {
 
             <Cabesalho />
 
+
             <div className='Card'>
-                <div className='BottonSalvarApp'>
+
+                <div className='inputNome'>
+                    <input type=""   
+                    placeholder='Digite seu nome...'
+                    />
+                </div>
+
+            <div className='inputEmail'>
+                <input type="" 
+                placeholder='Digite seu E-mail'
+                />
+            </div>
+
+
+                <div className='bottonSalvarApp'>
                     <BottonSalvar />
                 </div>
+
+                <div className='bottonDeletarApp'>
                 <BottonDeletar />
+                </div>
             </div>
+
+
+
+
 
         </>
     )
