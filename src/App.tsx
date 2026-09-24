@@ -15,19 +15,18 @@ function App() {
 
 
             <div className='Card'>
-
-                <div className='inputNome'>
-                    <input type=""   
+                <input
+                    type="nome"
                     placeholder='Digite seu nome...'
-                    />
-                </div>
-
-            <div className='inputEmail'>
-                <input type="" 
-                placeholder='Digite seu E-mail'
                 />
-            </div>
 
+                <input
+                    type="email"
+                    placeholder='Digite seu E-mail'
+                />
+ 
+
+                
 
                 <div className='bottonSalvarApp'>
                     <BottonSalvar />
@@ -37,9 +36,6 @@ function App() {
                 <BottonDeletar />
                 </div>
             </div>
-
-
-
 
 
         </>
