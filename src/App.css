@@ -110,8 +110,13 @@
 
 .Nome {
     
-    border-radius: 5px;
-    left: 15px;
+   position: relative;
+   
+   width: 10%;
+   height: 35px;
+
+   right: 65px;
+
 }
 
 .Email {
