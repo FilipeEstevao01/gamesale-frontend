@@ -15,25 +15,29 @@ function App() {
 
 
             <div className='Card'>
-                <input
-                    type="nome"
-                    placeholder='Digite seu nome...'
-                />
 
-                <input
-                    type="email"
-                    placeholder='Digite seu E-mail'
-                />
- 
+                <div className='Nome'>
+                    <input
+                        type="text"
+                        placeholder='Digite seu nome...'
+                    />
+                </div>
 
-                
+                <div className='Email'>
+                    <input
+                        type="text"
+                        placeholder='Digite seu E-mail'
+                    />
+                </div>
+
+
 
                 <div className='bottonSalvarApp'>
                     <BottonSalvar />
                 </div>
 
                 <div className='bottonDeletarApp'>
-                <BottonDeletar />
+                    <BottonDeletar />
                 </div>
             </div>
 

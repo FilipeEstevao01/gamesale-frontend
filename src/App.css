@@ -29,16 +29,12 @@
 
 .Card {
 
-  position: fixed;
-    left: 550px;
-    top: 250px;
+  position: relative;
+    left: 300px;
+    width: 800px;
+    height: 800px;
 
-    justify-content: center;
-    width: 600px;
-    height: 500px;
-
-    padding: 30px;
-
+    padding: 100px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -112,13 +108,13 @@
 }
 
 
-.nome {
+.Nome {
     
     border-radius: 5px;
     left: 15px;
 }
 
-.email {
+.Email {
 
     position: relative;
     left: 600px;
